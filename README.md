@@ -1,1 +1,1 @@
-# Python Directory Scanner
+# DirMaster
