@@ -26,37 +26,37 @@ Http = urllib3.PoolManager()
 
 def http():
 	for contents in fileSplit:
-    uri = f'http://{url}/{contents}'
-    r = Http.request('GET', uri)
-    res = r.status
+	    uri = f'http://{url}/{contents}'
+	    r = Http.request('GET', uri)
+	    res = r.status
 
-    if res == 200:
-        print("[+] 200 OK: " + uri)
-        dir.append("[+] 200 OK: " + uri + "\r\n")
-        print()
-    elif repr == 403:
-        print("[-] 403 Forbidden: " + uri)
-        print()
-    else:
-        print("[-] 404 Not Found: " + uri)
-        print()
+	    if res == 200:
+		print("[+] 200 OK: " + uri)
+		dir.append("[+] 200 OK: " + uri + "\r\n")
+		print()
+	    elif repr == 403:
+		print("[-] 403 Forbidden: " + uri)
+		print()
+	    else:
+		print("[-] 404 Not Found: " + uri)
+		print()
 
 def https():
 	for contents in fileSplit:
-    uri = f'https://{url}/{contents}'
-    r = Http.request('GET', uri)
-    res = r.status
+	    uri = f'https://{url}/{contents}'
+	    r = Http.request('GET', uri)
+	    res = r.status
 
-    if res == 200:
-        print("[+] 200 OK: " + uri)
-        dir.append("[+] 200 OK: " + uri + "\r\n")
-        print()
-    elif repr == 403:
-        print("[-] 403 Forbidden: " + uri)
-        print()
-    else:
-        print("[-] 404 Not Found: " + uri)
-        print()
+	    if res == 200:
+		print("[+] 200 OK: " + uri)
+		dir.append("[+] 200 OK: " + uri + "\r\n")
+		print()
+	    elif repr == 403:
+		print("[-] 403 Forbidden: " + uri)
+		print()
+	    else:
+		print("[-] 404 Not Found: " + uri)
+		print()
 		
 if http_or_https == "1":
     http()
